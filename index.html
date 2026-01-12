@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech Library System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>B.Tech Library System</h1>
+
+    <!-- Add Student -->
+    <section>
+        <h2>Add Student</h2>
+        <input type="text" id="studentName" placeholder="Student Name">
+        <input type="number" id="studentID" placeholder="Student ID">
+        <select id="studentYear">
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+        <button onclick="addStudent()">Add Student</button>
+    </section>
+
+    <!-- Add Book -->
+    <section>
+        <h2>Add Book</h2>
+        <input type="text" id="bookTitle" placeholder="Book Title">
+        <input type="number" id="bookID" placeholder="Book ID">
+        <input type="text" id="bookSubject" placeholder="Subject">
+        <button onclick="addBook()">Add Book</button>
+    </section>
+
+    <!-- Borrow Book -->
+    <section>
+        <h2>Borrow Book</h2>
+        <input type="number" id="borrowStudentID" placeholder="Student ID">
+        <input type="number" id="borrowBookID" placeholder="Book ID">
+        <button onclick="borrowBook()">Borrow</button>
+    </section>
+
+    <!-- Return Book -->
+    <section>
+        <h2>Return Book</h2>
+        <input type="number" id="returnStudentID" placeholder="Student ID">
+        <input type="number" id="returnBookID" placeholder="Book ID">
+        <button onclick="returnBook()">Return</button>
+    </section>
+
+    <!-- Display Data -->
+    <section>
+        <h2>Library Data</h2>
+        <button onclick="listStudentsByYear()">List Students by Year</button>
+        <button onclick="listBooksBySubject()">List Books by Subject</button>
+        <div id="output"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
